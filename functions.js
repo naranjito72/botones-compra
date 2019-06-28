@@ -16,3 +16,37 @@ let button2 = document.getElementById("boton2");
 
 let recogeDatos1 = document.getElementById("name");
 let recogeDatos2 = document.getElementById("money");
+
+//creacion array base datos
+
+let baseDeDatos = [
+    {
+        id: 1,
+        nombre: 'Zapatos',
+        precio: 39.95,
+        iva: 8,
+        Total: 47.95
+    },
+    {
+        id: 2,
+        nombre: 'Bolsos',
+        precio: 29.95,
+        iva: 6,
+        Total: 35.95
+    },
+    {
+        id: 3,
+        nombre: 'Cinturones',
+        precio: 19.95,
+        iva: 4,
+        Total: 23.95
+    },
+    {
+        id: 4,
+        nombre: 'Chaquetas',
+        precio: 69.95,
+        iva: 12,
+        Total: 81.95
+    }
+
+]
