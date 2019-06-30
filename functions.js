@@ -9,7 +9,8 @@ pintado final: suma y productos en div
 reset y todo en blanco
 
 */
-let button1 = document.getElementById("boton1");
+//let button1 = document.getElementById("boton1");
+
 let button2 = document.getElementById("boton2");
 
 //recogida inputs
@@ -51,7 +52,13 @@ let baseDeDatos = [
 
 ];
 function anyadirProducto (){
- this.boton1 = baseDeDatos.name
+lista.options[0] = new Option("--selecciona---");
+
+    for (let producto of productos){
+        let option = new Option(baseDeDatos.name);
+        option.value = producto.id;
+        lista.add(option);
+    }
 }
 
 function quitarProducto(){
