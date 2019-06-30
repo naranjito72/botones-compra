@@ -49,4 +49,27 @@ let baseDeDatos = [
         Total: 81.95
     }
 
-]
+];
+function anyadirProducto (){
+
+}
+
+function quitarProducto(){
+
+}
+
+function anyadoCarro(){
+
+}
+
+function quitarCarro(){
+
+}
+
+function sumarProducto(){
+
+}
+
+function restarProducto(){
+    
+}
