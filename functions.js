@@ -51,7 +51,7 @@ let baseDeDatos = [
 
 ];
 function anyadirProducto (){
-
+ this.boton1 = baseDeDatos.name
 }
 
 function quitarProducto(){
