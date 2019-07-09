@@ -24,6 +24,7 @@ Comentamos mi recogida de los inputs por que vamos a ponerlas al final del docum
 
 let button1 =   null;
 let button2 =   null;
+let button3 =   null;
 let btnanyadir = null;
 let lista   =   null;
 let tabla   =   null;
@@ -76,7 +77,27 @@ lista.options[0].value = 0;// indice de datos seleccionados
         lista.add(option);
     }
 }
-
+function leerArchivo(e) {
+    let archivo = e.target.files[0];
+    if (!archivo) {
+      return;
+    }
+    let lector = new FileReader();
+    lector.onload = function(e) {
+      let contenido = e.target.result;
+     productosAnhadidos = JSON.parse(contenido);
+        printTabla();//no parametros por tener la array already
+    };
+    lector.readAsText(archivo);
+  }
+  function descargarArchivo(){
+    let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(productosAnhadidos));
+    let dlAnchorElem = document.createElement('a');
+    dlAnchorElem.setAttribute("href",     dataStr     );
+    dlAnchorElem.setAttribute("download", "array.txt");
+    dlAnchorElem.click();
+  }
+  
 function quitarProducto(){
 
 }
@@ -155,7 +176,7 @@ function printTabla(){
         tdborrar.appendChild(botonBorrar);
         // lo que tienen que pintar
         tdnombre.innerHTML = prod.nombre;//declaracion del prod en for
-        tdprecio.innerHTML = prod.precio.toFixed(2);
+        tdprecio.innerHTML = parseFloat(prod.precio).toFixed(2);
     
         //donde?
         tr.appendChild(tdnombre);
@@ -174,7 +195,7 @@ function printTabla(){
     let tdiva1  = document.createElement('td');
     //pintado
     tdiva1.innerHTML ='IVA';
-    tdiva2.innerHTML = sumIva.toFixed(2);
+    tdiva2.innerHTML = parseFloat(sumIva).toFixed(2);
     //introduccion en la tablas
     triva.appendChild(tdiva1);
     triva.appendChild(tdiva2);
@@ -186,7 +207,7 @@ function printTabla(){
     let tdtotal2 = document.createElement('td');
     //pintado
     tdtotal1.innerHTML = 'TOTAL + IVA';
-    tdtotal2.innerHTML = sumTotal.toFixed(2);
+    tdtotal2.innerHTML = parseFloat(sumTotal).toFixed(2);
     //introduccion tabla
     trtotal.appendChild(tdtotal1);
     trtotal.appendChild(tdtotal2);
@@ -221,10 +242,12 @@ function anyadirProductoBBDD(){
 function init(){
     button1 = document.getElementById("boton1");
     button2 = document.getElementById("boton2");
+    button3 = document.getElementById("boton3");
     btnanyadir = document.getElementById("btnanyadir");
     lista = document.getElementById("productos");
     tabla = document.querySelector('table:nth-child(1)');
     button1.addEventListener('click', anhadirProducto);
+    button3.addEventListener('click', descargarArchivo);
     btnanyadir.addEventListener('click', anyadirProductoBBDD);
     try{
         baseDeDatos = JSON.parse(localStorage.getItem('bbdd'));
@@ -234,6 +257,9 @@ function init(){
         
         console.log(exc);
     }
+    document.getElementById('file-input')
+  .addEventListener('change', leerArchivo, false);
+
     anyadirProducto();
     
 
