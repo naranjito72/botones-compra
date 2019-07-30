@@ -11,6 +11,7 @@ body{
     .jumbotron{
         background-image: url(./../img/1.jpg);
         background-size:cover;
+
         color:whitesmoke;
         h1{
             font-size:800;
@@ -24,6 +25,7 @@ body{
         }
 
     }
+ 
     .container{
         margin-top:2vh;
         width:90vw;
@@ -35,7 +37,10 @@ body{
             width:35vw;
             height:70h;
             box-shadow: 5px 10px 10px #333;
-            
+            background-color: rgb(255, 255, 255);
+           /*  background-image: url(./../img/42.jpg);
+            background-size: cover;
+             */
              .campos{
                 margin:2vh;
                
@@ -49,7 +54,8 @@ body{
             width:35vw;
             height:70h;
             box-shadow: 5px 10px 10px #333;
-           
+            background-color: #fff;
+            
             .table{
                 text-decoration: none;
                
@@ -62,5 +68,12 @@ body{
         padding:0;
         box-sizing: border-box;
     }
+}
+.container1{
+    margin-top:8vh;
+   .card{
+width:45vw;
+box-shadow: 5px 10px 10px #333;
+   } 
 }
 }

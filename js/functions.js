@@ -64,6 +64,7 @@ let baseDeDatos = [
     }
 
 ];
+//creación array papelera
 let papelera = [];
 
 
@@ -148,9 +149,9 @@ function printTabla(){
     let tdh3 = document.createElement('td');
 
 //pintado de los elemntos HTML
-    tdh1.innerHTML ='Concepto';
-    tdh2.innerHTML = 'Cuantia';
-    tdh3.innerHTML = 'Borrar';
+    tdh1.innerHTML ='Producto';
+    tdh2.innerHTML = 'Precio';
+    tdh3.innerHTML = '';
     //declaramos que introducir en la cabecera
     trheader.appendChild(tdh1);
     trheader.appendChild(tdh2);
