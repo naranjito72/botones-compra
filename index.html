@@ -12,7 +12,8 @@
 <body>
     <div class="container">
         <div class="izquierda">
-            <div class="campos ">
+            <div class="columns ">
+                <div class="col-sm-4">
                 <form action="">
                     <label for="file-input" >Cargar Factura...</label>
                     <input type="file" id="file-input"  name="file-input"/>
@@ -25,6 +26,8 @@
                             
                         </div>
                     </form>
+                </div>
+                <div class="col-sm-4">
                     <form action="">
                     <label for="productos">Productos</label>
                     <select id="productos">
@@ -33,23 +36,31 @@
                 
                 </form>
             </div>
+            <div class="row-sm-4">
             <div class="botones">
                 <button type="submit" id="boton1" class="btn-text-primary">Añadir Producto</button>
                 <button type="submit" id="boton2" class="btn-text-primary">Emitir factura</button>
                 <button type="submit" id="boton3" class="btn-text-primary">Descargar factura</button>
             </div>
         </div>
+        </div>
+        </div>
+    
         <div class="derecha">
-            <table class="datos">
+            <div class="row">
+            <table class="table">
+                <thead>
                 <tr>
-                    <th>
+                    <th scope="col">
                         Producto
                     </th>
-                    <th>
+                    <th scope="col">
                           Precio  
                     </th>
                     
                 </tr>
+            </thead>
+            <tbody>
                 <tr>
                    <td></td>
                    <td></td>
@@ -61,8 +72,9 @@
                    <td></td>
                     
                 </tr>
-
+            </tbody>
             </table>
+        </div>
         </div>
     </div>
     <script src="js/functions.js"></script>

@@ -1,3 +1,4 @@
+
 body{
     margin:0;
     padding:0;
@@ -8,26 +9,37 @@ body{
     flex-flow: row nowra;
     justify-content: center;
     .container{
+        margin-top:2vh;
         width:80vw;
         height:90vh;
         display:flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         .izquierda{
-            width:50vw;
+            width:35vw;
             height:70h;
             box-shadow: 5px 10px 10px #333;
             display:flex;
             flex-flow: column nowrap;
             /* justify-content: center; */
-            .campos{
+            /* .campos{
                 margin:2vh;
                 #productos{
                     margin:4vh 0 4vh 4vh;
-                }
+                } */
+            }
+            .derecha{
+                width:35vw;
+                height:70h;
+                box-shadow: 5px 10px 10px #333;
+
             }
         }
-    }
+        .table{
+            text-decoration: none;
+           
+}
+    
     @media print{
         margin:0;
         padding:0;
