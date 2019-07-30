@@ -8,9 +8,25 @@ body{
     display: flex-box;
     flex-flow: row nowra;
     justify-content: center;
+    .jumbotron{
+        background-image: url(./../img/1.jpg);
+        background-size:cover;
+        color:whitesmoke;
+        h1{
+            font-size:800;
+            font-weight: bold;
+        }
+        p.lead{
+            font-size:250%;
+        }
+        p{
+            font-size:150%;
+        }
+
+    }
     .container{
         margin-top:2vh;
-        width:80vw;
+        width:90vw;
         height:90vh;
         display:flex;
         flex-flow: row nowrap;
@@ -19,30 +35,32 @@ body{
             width:35vw;
             height:70h;
             box-shadow: 5px 10px 10px #333;
-            display:flex;
-            flex-flow: column nowrap;
-            /* justify-content: center; */
-            /* .campos{
+            
+             .campos{
                 margin:2vh;
-                #productos{
-                    margin:4vh 0 4vh 4vh;
-                } */
+               
             }
-            .derecha{
-                width:35vw;
-                height:70h;
-                box-shadow: 5px 10px 10px #333;
-
+            #productes{
+                margin-left:3vw !important;
             }
-        }
-        .table{
-            text-decoration: none;
            
-}
+        }
+        .derecha{
+            width:35vw;
+            height:70h;
+            box-shadow: 5px 10px 10px #333;
+           
+            .table{
+                text-decoration: none;
+               
+    }
+        }
+
     
     @media print{
         margin:0;
         padding:0;
         box-sizing: border-box;
     }
+}
 }
