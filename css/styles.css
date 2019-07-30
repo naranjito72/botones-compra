@@ -30,6 +30,29 @@ body .container {
           justify-content: space-between;
 }
 
+body .container .izquierda {
+  width: 50vw;
+  height: 70h;
+  -webkit-box-shadow: 5px 10px 10px #333;
+          box-shadow: 5px 10px 10px #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  /* justify-content: center; */
+}
+
+body .container .izquierda .campos {
+  margin: 2vh;
+}
+
+body .container .izquierda .campos #productos {
+  margin: 4vh 0 4vh 4vh;
+}
+
 @media print {
   body {
     margin: 0;

@@ -13,6 +13,20 @@ body{
         display:flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        .izquierda{
+            width:50vw;
+            height:70h;
+            box-shadow: 5px 10px 10px #333;
+            display:flex;
+            flex-flow: column nowrap;
+            /* justify-content: center; */
+            .campos{
+                margin:2vh;
+                #productos{
+                    margin:4vh 0 4vh 4vh;
+                }
+            }
+        }
     }
     @media print{
         margin:0;
