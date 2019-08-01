@@ -67,7 +67,7 @@ let baseDeDatos = [
 //creación array papelera
 let papelera = [];
 
-
+//creacion productos añadidos
 let productosAnhadidos = [];
 
 function anyadirProducto (){
@@ -221,6 +221,7 @@ function printTabla(){
     tabla.appendChild(trtotal);
 
 }
+
 function eliminarElemento(id){
     for(let i = 0; i < productosAnhadidos.length; i++){
         if(parseInt(productosAnhadidos[i].id) == id){
@@ -275,5 +276,40 @@ function destroy(){
 
     }
 }
+
+//Aparición contextMenu
+const menu = document.querySelector(".menu");
+let menuVisible = false;
+//const toggle
+const toggleMenu = command => {
+    menu.style.display = command === "show" ? "block" : "none";
+    menuVisible = !menuVisible;
+};
+//posicion contextMenu
+
+const setPosition = ({  left }) => {
+    /* menu.style.top = `${top}px`; */
+    menu.style.left = `${left}px`;
+    toggleMenu('show');
+}
+
+
+
 window.addEventListener( 'load', init);
 window.addEventListener( 'unload', destroy);
+//solo pasa al hacer click!
+window.addEventListener("click", e => {
+    if(menuVisible)toggleMenu("hide");
+
+});
+//evitar que el evento pasé al cargar la página
+window.addEventListener('contextmenu', e =>{
+    e.preventDefault();
+    const origin = {
+        left: e.pageX,
+        top: e.pageY
+    };
+    setPosition(origin);
+    return false;
+
+});

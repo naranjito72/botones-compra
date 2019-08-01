@@ -8,8 +8,8 @@ body {
   display: flex-box;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowra;
-          flex-flow: row nowra;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -43,8 +43,8 @@ body .container {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -81,6 +81,13 @@ body .container .derecha .table {
   text-decoration: none;
 }
 
+body .container .card {
+  margin-top: 8vh;
+  width: 45vw;
+  -webkit-box-shadow: 5px 10px 10px #333;
+          box-shadow: 5px 10px 10px #333;
+}
+
 @media print {
   body .container {
     margin: 0;
@@ -90,13 +97,27 @@ body .container .derecha .table {
   }
 }
 
-body .container1 {
-  margin-top: 8vh;
+body .menu {
+  width: 120px;
+  -webkit-box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: none;
 }
 
-body .container1 .card {
-  width: 45vw;
-  -webkit-box-shadow: 5px 10px 10px #333;
-          box-shadow: 5px 10px 10px #333;
+body .menu .menu-options {
+  list-style: none;
+  padding: 10px 0;
+}
+
+body .menu .menu-options .menu-option {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 40px 10px 20px;
+  cursor: pointer;
+}
+
+body .menu .menu-options .menu-option:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=styles.css.map */
